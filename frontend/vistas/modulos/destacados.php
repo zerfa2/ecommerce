@@ -1,23 +1,33 @@
 <?php 
 	$servidor = Ruta::mdlServidor();
 	$url = Ruta::mdlRuta();
+	$ruta= "sin-categoria";
+	$banner = ProductosControlador::ctrMostrarBanner($ruta);
+	$titulo1 = json_decode($banner["titulo1"],true);
+	$titulo2 = json_decode($banner["titulo2"],true);
+	$titulo3 = json_decode($banner["titulo3"],true);
 
- ?>
- 
+	// var_dump($banner["titulo1"]);
+	echo '
+	<figure class="banner">
+		<img src="'.$servidor.$banner["imagen"].'" class="img-responsive" width="100%">
+		<div class="textoBanner '.$banner["estilo"].'">
+			<h1 style="color:'.$titulo1["color"].'">'.$titulo1["texto"].'</h1>
+			<h2 style="color:'.$titulo2["color"].'"><strong>'.$titulo2["texto"].'</strong></h2>
+			<h3 style="color:'.$titulo3["color"].'"><strong>'.$titulo3["texto"].'</strong></h3>
+		
+		</div>
+
+	</figure>';
+
+
+
+?>
 <!--=====================================
 BANNER
 ======================================-->
 
-<figure class="banner">
-	<img src="<?php echo $servidor; ?>vistas/img/banner/default.jpg" class="img-responsive" width="100%">
-	<div class="textoBanner textDer">
-		<h1 style="color:#fff">OFERTAS ESPECIALES</h1>
-		<h2 style="color:#fff"><strong>50% off</strong></h2>
-		<h3 style="color:#fff"><strong>Termina el 31 de octubre</strong></h3>
-	
-	</div>
 
-</figure>
 <?php 
 $titulosModulos = array("ARTICULOS GRATUITOS","LO MAS VENDIDO","LO MAS VISTO");
 $rutaModulos = array("articulos-gratis","lo-mas-vendido","lo-mas-visto");

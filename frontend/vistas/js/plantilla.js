@@ -1,7 +1,7 @@
 /*========================
 PLANTILLA
 ========================*/
-// var rutaOculta  = $("#rutaOculta").val();
+var rutaOculta  = $("#rutaOculta").val();
 
 
 // Herramienta TOOLTIP
@@ -32,18 +32,19 @@ for (var i = 0 ; i < btnList.length; i++) {
 /*========================
 EFECTOS SCROLL
 ========================*/
-
-$(window).scroll(function(){
-	var scrollY = window.pageYOffset;
-	if(window.matchMedia("(min-width:768px)").matches){
-		if(scrollY < ($(".banner").offset().top)-200){
-			$(".banner img").css({"margin-top":-scrollY/2+"px"});
-		}else{
-			scrollY = 0;
+var ban=$(".banner").val();
+if(ban!=null){
+	$(window).scroll(function(){
+		var scrollY = window.pageYOffset;
+		if(window.matchMedia("(min-width:768px)").matches){
+			if(scrollY < ($(".banner").offset().top)-200){
+				$(".banner img").css({"margin-top":-scrollY/2+"px"});
+			}else{
+				scrollY = 0;
+			}
 		}
-	}
-})
-
+	})
+}
 $.scrollUp({
 	scrollText:"",
 	scrollSpeed:2000,
@@ -53,7 +54,7 @@ $.scrollUp({
 });
 
 /*=============================================
-MIGAS DE PAN BREADCROMP
+MIGAS DE PAN BREADCRUMP
 =============================================*/
 var paginaActiva = $(".paginaActiva").html();
 if(paginaActiva !=null){
@@ -65,8 +66,14 @@ ENLACE PAGINACION
 =============================================*/
 var urll = window.location.href;
 var indice = urll.split("/");
+
 var ultimo = indice.pop();
 if( ultimo != "#"){
 	
 	$("#item"+ultimo).addClass("active");
 }
+var indiceBuscar = urll.split("/");
+indiceBuscar.pop();
+indiceBuscar.pop();
+var ultimoBuscar = indiceBuscar.pop();
+$("#item"+ultimoBuscar).addClass("active");

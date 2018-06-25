@@ -101,7 +101,7 @@ HEADER
 				<div class="input-group col-lg-8 col-md-8 col-sm-8 col-xs-12 backColor" id="buscador">
 					<input type="search" name="buscar" class="form-control" placeholder="Buscar...">
 					<span class="input-group-btn">
-						<a href="#">
+						<a href="<?php echo $url ?>buscador/1/recientes">
 							<button class="btn btn-default backColor" type="submit">
 								<i class="fa fa-search" aria-hidden="true"></i>								
 							</button>
@@ -161,3 +161,96 @@ HEADER
 	</div>
 
 </header>
+
+<!--=====================================
+VENTANA MODAL DE BOOTSTRAP
+======================================-->
+
+<!-- <button type="button" data-toggle="modal" data-target="#modalRegistro"></button> -->
+
+
+<!-- Modal -->
+<div class="modal fade modalFormulario" id="modalRegistro" role="dialog">
+  <div class="modal-dialog " >
+    <div class="modal-content">
+      
+      <div class="modal-body modalTitulo">
+      	<h3 class="backColor">REGISTRARSE</h3>
+      	<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+      	<!--=====================================
+		REGISTRO FACEBOOK
+		======================================-->
+		<div class="col-sm-6 col-xs-12 facebook" id="btnFacebookRegistro">
+			<p>
+				<i class="fa fa-facebook"></i>
+				Registro con Facebook
+			</p>
+		</div>
+
+		<!--=====================================
+		REGISTRO GOOGLE
+		======================================-->
+		<div class="col-sm-6 col-xs-12 google" id="btnGoogleRegistro">
+			<p>
+				<i class="fa fa-google"></i>
+				Registro con Google
+			</p>
+		</div>
+		<!--=====================================
+		REGISTRO DIRECTO
+		======================================-->
+		<form method="post" onsubmit="return registroUsuario()">
+		<hr>
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<i class="glyphicon glyphicon-user"></i>
+					</span>
+					<input type="text" name="regUsuario" class="form-control text-uppercase" id="regUsuario" placeholder="nombre completo" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<i class="glyphicon glyphicon-envelope"></i>
+					</span>
+					<input type="email" name="regEmail" class="form-control" id="regEmail" placeholder="Correo electronico" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<i class="glyphicon glyphicon-lock"></i>
+					</span>
+					<input type="password" name="regPassword" class="form-control" id="regPassword" placeholder="Contraseña" required>
+				</div>
+			</div>
+			<!--  iubenda.com -->
+			<div class="checkBox">
+				<label>
+					<input id="regPoliticas" type="checkbox" name="">
+
+					<small>
+						Acepta nuestras condiciones de uso y politicas de privacidad
+						<br>
+						<span class="iubenda">
+							<a  href="https://www.iubenda.com/privacy-policy/60195988" class="iubenda-white iubenda-embed " title="Privacy Policy">Ver más </a> <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+						</span>
+					</small>
+				</label>
+			</div>
+			<input type="submit" class="btn btn-default backColor btn-block" value="ENVIAR">
+
+		</form>
+
+      </div>
+      <div class="modal-footer">
+      	¿Ya tienes una cuenta registrada? | <strong><a href="#modalIngreso" data-dismiss="modal" data-toggle="modal">Ingresar</a></strong>
+        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" data-dismiss="modal">Guardar</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin modal -->

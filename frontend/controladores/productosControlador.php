@@ -27,6 +27,28 @@ class ProductosControlador{
 		$rspta = ProductoModelo::mdlListarProductos($tabla,$ordenar,$item,$valor);
 		return $rspta; 
 	}
+
+	static public function ctrMostrarBanner($ruta){
+		$tabla = 'banner';
+		$rspta = ProductoModelo::mdlMostrarBanner($tabla,$ruta);
+		return $rspta;
+	}
+	static public function ctrBuscarProductos($busqueda,$ordenar,$modo,$base,$tope){
+		$tabla = 'producto';
+		$rspta = ProductoModelo::mdlBuscarProductos($tabla,$busqueda,$ordenar,$modo,$base,$tope);
+		return $rspta;
+	}
+	static public function ctrListarProductosBusqueda($busqueda){
+		$tabla = 'producto';
+		$rspta = ProductoModelo::mdlListarProductosBusqueda($tabla,$busqueda);
+		return $rspta;
+	}
+
+	static public function ctrActualizarVistaProducto($valor,$item,$ruta){
+		$tabla= 'producto';
+		$rspta = ProductoModelo::mdlActualizarVistaProducto($tabla,$valor,$item,$ruta);
+		return $rspta;
+	}
 }
 
 

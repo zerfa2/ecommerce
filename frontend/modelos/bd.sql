@@ -90,7 +90,7 @@ insert into subcategoria(subcategoria,idcategoria,ruta) values('Laravel','5','la
  
 
 INSERT INTO `banner` (`idbanner`, `ruta`, `imagen`, `titulo1`, `titulo2`, `titulo3`, `estilo`) VALUES
-(1, 'sin-categoria', 'vistas/img/banner/default.jpg', '{"texto": "OFERTAS ESPECIALES","color": "#fff"}', '{"texto": "50% off","color": "#fff"}', '{"texto": "Termina el 31 de Octubre","color": "#fff"}', 'textoDer'),
-(2, 'articulos-gratis', 'vistas/img/banner/ropa.jpg', '{"texto": "ARTÍCULOS GRATIS","color": "#fff"}', '{"texto": "¡Entrega inmediata!","color": "#fff"}', '{"texto": "Disfrútalo","color": "#fff"}', 'textoIzq'),
-(3, 'desarrollo-web', 'vistas/img/banner/web.jpg', '{"texto": "OFERTAS ESPECIALES","color": "#fff"}', '{"texto": "50% off","color": "#fff"}', '{"texto": "Termina el 31 de Octubre","color": "#fff"}', 'textoCentro'),
-(4, 'ropa-para-hombre', 'vistas/img/banner/ropaHombre.jpg', '{"texto": "OFERTAS ESPECIALES","color": "#fff"}', '{"texto": "50% off","color": "#fff"}', '{"texto": "Termina el 31 de Octubre","color": "#fff"}', 'textoDer');
+(1, 'sin-categoria', 'vistas/img/banner/default.jpg', '{"texto": "OFERTAS ESPECIALES","color": "#fff"}', '{"texto": "50% off","color": "#fff"}', '{"texto": "Termina el 31 de Octubre","color": "#fff"}', 'textDer'),
+(2, 'articulos-gratis', 'vistas/img/banner/ropa.jpg', '{"texto": "ARTÍCULOS GRATIS","color": "#fff"}', '{"texto": "¡Entrega inmediata!","color": "#fff"}', '{"texto": "Disfrútalo","color": "#fff"}', 'textIzq'),
+(3, 'desarrollo-web', 'vistas/img/banner/web.jpg', '{"texto": "OFERTAS ESPECIALES","color": "#fff"}', '{"texto": "50% off","color": "#fff"}', '{"texto": "Termina el 31 de Octubre","color": "#fff"}', 'textCentro'),
+(4, 'ropa-para-hombre', 'vistas/img/banner/ropaHombre.jpg', '{"texto": "OFERTAS ESPECIALES","color": "#fff"}', '{"texto": "50% off","color": "#fff"}', '{"texto": "Termina el 31 de Octubre","color": "#fff"}', 'textDer');
